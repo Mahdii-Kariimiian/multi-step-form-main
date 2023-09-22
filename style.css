@@ -237,7 +237,13 @@ body {
     transition: all .5s ease;
   }
 
-  /* section 3 */ /* monthly and yearly prices are diffrent */
+  .month-free  {
+        font-size: .65rem;
+        font-weight: 600;
+        position:relative;
+  }
+
+  /* step 3 */ /* monthly and yearly prices are diffrent */
 
   .step-three__add-ons {
     display: flex;
@@ -370,6 +376,7 @@ body {
 
     .plan {
         width: 125px;
+        height: 155px;
         flex-direction: column;
         align-items: start;
         padding: .7rem;

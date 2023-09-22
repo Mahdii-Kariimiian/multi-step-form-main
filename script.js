@@ -5,6 +5,8 @@ const input = $.querySelectorAll(".input")
 const EmailPattern = /([a-zA-z0-9._]+)@([a-zA-z0-9._]+).([a-zA-z0-9._]+)/
 const numberPattern = /^\+\d{10}/
 
+let totalPrice = 0
+
 
 input.forEach((item , index)=> {
     //create empty alert
@@ -112,4 +114,42 @@ stepFourChange.addEventListener ( "click" , ()=>{
     stepFour.classList.remove("hidden")
     stepFourChange.classList.add("focus-sidebar")
 })
+
+/* checkbox */ 
+
+const checkbox = $.querySelector(".checkbox")
+const stepTwoYearly  = $.querySelector(".step-two__yearly ")
+const stepTwoMonthly  = $.querySelector(".step-two__monthly ")
+const plan = $.querySelectorAll('.plan')
+const zero = $.querySelectorAll(".zero")
+
+const monthFree = $.querySelectorAll(".month-free")
+
+checkbox.addEventListener("change" , ()=>{
+    stepTwoYearly.classList.toggle("text-color")
+    stepTwoMonthly.classList.toggle("text-color")
+    monthFree.forEach (p => {
+    p.classList.toggle("hidden")
+    zero.forEach((z)=>{
+        z.classList.toggle("hidden")
+    })
+    })
+})
+
+/* pick plan */
+
+plan.forEach((p)=>{
+    let finalprice =""
+    let pricePlan = p.childNodes[3].childNodes[3].innerText
+    let priceplantonumber = pricePlan.split("")
+    priceplantonumber.forEach ((n)=> {
+        if (!isNaN(n)) {
+            finalprice += n
+        }
+    })
+    p.addEventListener ("click" , ()=>{
+       totalPrice = finalprice
+    })
+})
+
 
