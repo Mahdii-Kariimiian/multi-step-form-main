@@ -17,7 +17,7 @@ img {
     --Strawberryred: hsl(354, 84%, 57%);
     --Coolgray: hsl(231, 11%, 63%);
     --Lightgray: hsl(229, 24%, 87%);
-    --Magnolia: hsl(217, 100%, 97%);
+    --Magnolia:  hsl(217, 100%, 97%);
     --Alabaster: hsl(231, 100%, 99%);
     --White: hsl(0, 0%, 100%);
 }
@@ -102,6 +102,7 @@ body {
 
 .button:hover {
     cursor:pointer;
+    background-color: var(--Purplishblue);
 }
 
 .button-section {
@@ -121,6 +122,7 @@ body {
 
 .back-button:hover {
     cursor: pointer;
+    color: var(--Marineblue);
 }
 
 .button-section,
@@ -228,12 +230,12 @@ body {
 }
 
   .checkbox:checked + .slider:before { 
-    transform: translateX(100%);
+    transform: translateX(0);
     transition: all .5s ease;
   }
 
   .checkbox + .slider:before { /* not checked for monthly  */
-    transform: translateX(0);
+    transform: translateX(100%);
     transition: all .5s ease;
   }
 
@@ -280,6 +282,74 @@ body {
     cursor:pointer
   }
 
+  /* step 4 */
+
+  .step-four__double-check > * {
+    margin-bottom: 2.5rem;
+  }
+
+  .step-four__plan-choose_for-flex {
+    position:relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .step-four__plan-choose_for-flex::after {
+    content: "";
+    position:absolute;
+    bottom:-1rem;
+    right:5%;
+    width: 90%;
+    height: 1px;
+    background-color: hsl(229, 24%, 87%);
+  }
+
+  .step-four__double-check__add-ons {
+    position:relative;
+    padding: 1rem;
+    line-height: 2rem;
+    }
+
+  .step-four__double-check__add-ons::after {
+    content: "";
+    position:absolute;
+    bottom:-1rem;
+    right:5%;
+    width: 90%;
+    height: 1px;
+    background-color: hsl(229, 24%, 87%);
+  }
+
+  .step-four__double-check__add-on {
+    display:flex;
+    justify-content: space-between;
+  }
+
+  .step-four__double-check__total {
+    padding: 1rem;
+  }
+
+  .step-four__double-check__total {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .step-four__double-check__total__price {
+    color: var(--Purplishblue)
+  }
+
+  .total {
+    color: var(--Coolgray);
+    font-weight: 600;
+  }
+
+  .step-four__plan__change {
+    color: var(--Coolgray);
+    text-decoration: underline;
+    cursor:pointer
+  }
+
   /* step 5  */
 
   .step-five {
@@ -290,6 +360,8 @@ body {
     padding-block: 5rem;
     line-height: 1.5rem;
   }
+
+  
 
   /* desktop version */
 
@@ -392,6 +464,12 @@ body {
     .add-on {
         padding: .8rem;
     }
+
+    /* step 4 */
+
+    .step-four__double-check > * {
+        margin-bottom: 1rem;
+      }
   }
 
 
@@ -418,3 +496,15 @@ body {
   .hidden {
     display: none;
   }
+
+  .add-ons-checkbox {
+    cursor:pointer;
+  }
+
+  .border-pick {
+    border: 1px solid hsl(213, 96%, 18%);
+    background-color: var(--Magnolia);
+  }
+
+ 
+   
