@@ -377,7 +377,7 @@ body {
         background-color: var(--White);
         padding: .8rem;
         padding-right: 0;
-        white-space: nowrap;
+        /* white-space: nowrap; */
     }
 
     .steps {
@@ -406,6 +406,7 @@ body {
         text-transform: uppercase;
         letter-spacing: .07rem;
         border-radius: 10px;
+        white-space: nowrap;
     }
 
     .sidebar__step__content {
@@ -438,6 +439,7 @@ body {
     .steps__text {
         font-size: .8rem;
         margin-bottom: 2rem;
+        white-space: wrap;
     }
 
     /* step two */
